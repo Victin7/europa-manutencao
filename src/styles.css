@@ -1,0 +1,210 @@
+@import "tailwindcss" source(none);
+@source "../src";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-gold: var(--gold);
+  --color-gold-foreground: var(--gold-foreground);
+  --color-success: var(--success);
+  --color-success-foreground: var(--success-foreground);
+  --color-warning: var(--warning);
+  --color-warning-foreground: var(--warning-foreground);
+  --color-danger: var(--danger);
+  --color-danger-foreground: var(--danger-foreground);
+  --color-info: var(--info);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --radius-card: 12px;
+  --shadow-card: 0 1px 3px 0 rgb(0 0 0 / 0.06), 0 1px 2px -1px rgb(0 0 0 / 0.04);
+  --shadow-card-hover: 0 4px 12px 0 rgb(0 0 0 / 0.08);
+  --transition-default: 150ms cubic-bezier(0.4, 0, 0.2, 1);
+  --shadow-elevated: 0 10px 30px -10px color-mix(in oklab, var(--primary) 25%, transparent);
+  --shadow-gold: 0 6px 20px -8px color-mix(in oklab, var(--gold) 55%, transparent);
+  --gradient-primary: linear-gradient(135deg, var(--primary), color-mix(in oklab, var(--primary) 75%, var(--gold)));
+  --gradient-surface: linear-gradient(180deg, color-mix(in oklab, var(--card) 95%, transparent), var(--card));
+  --font-display: "Playfair Display", Georgia, serif;
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+}
+
+:root {
+  --radius: 0.625rem;
+
+  --background: oklch(0.985 0.005 250);
+  --foreground: oklch(0.18 0.04 260);
+
+  --card: oklch(1 0 0);
+  --card-foreground: oklch(0.18 0.04 260);
+  --popover: oklch(1 0 0);
+  --popover-foreground: oklch(0.18 0.04 260);
+
+  --primary: oklch(0.28 0.09 264);
+  --primary-foreground: oklch(0.99 0.01 250);
+
+  --secondary: oklch(0.95 0.01 250);
+  --secondary-foreground: oklch(0.22 0.06 264);
+
+  --muted: oklch(0.96 0.008 250);
+  --muted-foreground: oklch(0.48 0.03 260);
+
+  --accent: oklch(0.94 0.02 90);
+  --accent-foreground: oklch(0.22 0.06 264);
+
+  --gold: oklch(0.78 0.13 85);
+  --gold-foreground: oklch(0.2 0.04 260);
+
+  --success: oklch(0.62 0.16 145);
+  --success-foreground: oklch(0.99 0.01 250);
+  --warning: oklch(0.74 0.16 55);
+  --warning-foreground: oklch(0.2 0.04 260);
+  --danger: oklch(0.58 0.22 25);
+  --danger-foreground: oklch(0.99 0.01 250);
+  --info: oklch(0.62 0.14 240);
+
+  --destructive: oklch(0.58 0.22 25);
+  --destructive-foreground: oklch(0.99 0.01 250);
+
+  --border: oklch(0.9 0.012 255);
+  --input: oklch(0.9 0.012 255);
+  --ring: oklch(0.45 0.1 264);
+
+  --chart-1: oklch(0.28 0.09 264);
+  --chart-2: oklch(0.78 0.13 85);
+  --chart-3: oklch(0.55 0.13 220);
+  --chart-4: oklch(0.62 0.16 145);
+  --chart-5: oklch(0.58 0.22 25);
+}
+
+.dark {
+  --background: oklch(0.18 0.04 260);
+  --foreground: oklch(0.98 0.005 250);
+  --card: oklch(0.22 0.05 264);
+  --card-foreground: oklch(0.98 0.005 250);
+  --popover: oklch(0.22 0.05 264);
+  --popover-foreground: oklch(0.98 0.005 250);
+  --primary: oklch(0.36 0.1 264);
+  --primary-foreground: oklch(0.99 0.01 250);
+  --secondary: oklch(0.28 0.06 264);
+  --secondary-foreground: oklch(0.98 0.005 250);
+  --muted: oklch(0.26 0.05 264);
+  --muted-foreground: oklch(0.72 0.02 260);
+  --accent: oklch(0.32 0.06 264);
+  --accent-foreground: oklch(0.98 0.005 250);
+  --border: oklch(1 0 0 / 12%);
+  --input: oklch(1 0 0 / 14%);
+  --ring: oklch(0.78 0.13 85);
+}
+
+@layer base {
+  * { border-color: var(--color-border); }
+  body {
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+    font-family: var(--font-sans);
+  }
+  h1, h2, h3 { font-family: var(--font-display); letter-spacing: -0.01em; }
+}
+
+/* Subtle transitions */
+button, a { transition: background-color 0.15s ease, color 0.15s ease, border-color 0.15s ease, opacity 0.15s ease, transform 0.15s ease, box-shadow 0.15s ease; }
+
+/* Utility classes for the design system */
+@utility surface-card {
+  background: var(--gradient-surface);
+  box-shadow: var(--shadow-card);
+  border: 1px solid color-mix(in oklab, var(--border) 80%, transparent);
+  border-radius: var(--radius-lg);
+}
+@utility hover-lift {
+  &:hover { transform: translateY(-2px); box-shadow: var(--shadow-elevated); }
+}
+@utility kpi-gradient {
+  background: var(--gradient-primary);
+  color: var(--primary-foreground);
+}
+
+/* Print rules */
+@media print {
+  body { background: white !important; color: black !important; }
+  .no-print, .no-print * { display: none !important; }
+  .print-only { display: block !important; }
+  .print-page { page-break-after: always; box-shadow: none !important; border: none !important; }
+  .print-page:last-child { page-break-after: auto; }
+  @page { size: A4; margin: 14mm; }
+}
+.print-only { display: none; }
+
+/* FullCalendar — tema Europa */
+.fc-europa .fc {
+  --fc-border-color: hsl(var(--border));
+  --fc-page-bg-color: transparent;
+  --fc-neutral-bg-color: hsl(var(--muted));
+  --fc-today-bg-color: hsl(var(--muted) / 0.5);
+  font-family: inherit;
+}
+.fc-europa .fc .fc-toolbar-title {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: hsl(var(--primary));
+  text-transform: capitalize;
+}
+.fc-europa .fc .fc-button {
+  background: hsl(var(--muted));
+  border: 1px solid hsl(var(--border));
+  color: hsl(var(--foreground));
+  box-shadow: none;
+  text-transform: capitalize;
+  font-size: 0.8rem;
+  padding: 0.35rem 0.7rem;
+  border-radius: 0.6rem;
+}
+.fc-europa .fc .fc-button:hover { background: hsl(var(--muted) / 0.7); }
+.fc-europa .fc .fc-button-primary:not(:disabled).fc-button-active,
+.fc-europa .fc .fc-button-primary:not(:disabled):active {
+  background: hsl(var(--primary));
+  border-color: hsl(var(--primary));
+  color: hsl(var(--primary-foreground));
+}
+.fc-europa .fc .fc-col-header-cell-cushion {
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: hsl(var(--muted-foreground));
+  padding: 0.5rem 0;
+}
+.fc-europa .fc .fc-daygrid-day-number { font-size: 0.78rem; color: hsl(var(--foreground)); }
+.fc-europa .fc .fc-event { border-width: 0 0 0 3px; border-radius: 0.4rem; cursor: pointer; }
+.fc-europa .fc .fc-daygrid-event { margin-bottom: 2px; }
+.fc-europa .fc .fc-list-event:hover td { background: hsl(var(--muted)); }
+.fc-mini .fc .fc-toolbar-title { font-size: 0.8rem; font-weight: 600; text-transform: capitalize; }
+.fc-mini .fc .fc-button { padding: 0.15rem 0.4rem; font-size: 0.7rem; }
+.fc-mini .fc .fc-daygrid-day-number { font-size: 0.7rem; }
+.fc-mini .fc .fc-col-header-cell-cushion { font-size: 0.6rem; padding: 0.2rem 0; }
+.fc-mini .fc .fc-daygrid-day-events { min-height: 0; }
